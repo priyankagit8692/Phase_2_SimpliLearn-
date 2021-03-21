@@ -1,0 +1,15 @@
+•	Project Description
+This Project is a Online School Management Project. It has Admin Page for Admin Register and the Admin keeps the track of the student and classes.
+
+•	Developer Details:
+Name : Priyanka Kumawat
+
+•	Technology Used:
+-	Eclipse
+-	H2 in memory database
+-	Java Programming language
+-	Java Servlet
+-	JSP
+-	Html and CSS
+
+Note : Also while running project start Running from AdminLogin.jsp
