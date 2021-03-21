@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+body {
+  background-image: url("images/academy.jpg");
+  background-repeat: no-repeat;
+  max-width: 200%;
+  height: auto;
+}
+div {
+  transform: translate(-200px,50px);
+}
+h1{
+  transform: translate(30px,50px);
+}
+</style>
+<body>
+  <div align='right'>
+  <h1>LEARNER  ACADEMY</h1> <br><br>
+  <h3>Administration Login</h3>
+  <form action="adminLogin" method="post" cellpadding="5" cellspacing="5">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="AdminRegistration.jsp">Register</a>&nbsp&nbsp&nbsp&nbsp<a href="AdminUpdate.jsp">Update</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Login</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <c:if test="${not empty msg}">
+        <c:out value="${msg}"/>
+    </c:if>
+
+
+</form>
+  </div>
+</body>
+</html>

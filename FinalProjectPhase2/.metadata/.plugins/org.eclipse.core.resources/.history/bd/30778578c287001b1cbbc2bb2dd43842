@@ -1,0 +1,5 @@
+package com.learneracademy.Entity;
+
+public class Student {
+
+}

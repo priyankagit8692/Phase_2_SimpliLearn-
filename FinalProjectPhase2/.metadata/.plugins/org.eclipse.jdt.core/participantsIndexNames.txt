@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\HP 0502\FinalProjectPhase2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1792298800.index
+\LearnerAcademyProject\src
+C:\Users\HP 0502\FinalProjectPhase2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\490618385.index
+\LearnerAcademy\src\main\java
+C:\Users\HP 0502\FinalProjectPhase2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3499678660.index
+\LearnerAcademy\src

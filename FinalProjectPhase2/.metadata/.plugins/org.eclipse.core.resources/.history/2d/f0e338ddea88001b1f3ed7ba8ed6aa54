@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Update</title>
+</head>
+<body>
+<div align="center" style="border: solid 4px black;">
+    <h1>Update Admin</h1>
+    <form method="post" action="adminUpdate">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="adminName"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="adminEmail"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="adminPassword"></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="text" name="adminPhone"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="adminCity"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Update</button>
+                </td>
+            </tr>
+        </table>
+        <c:if test="${not empty msg}">
+            <c:out value="${msg}"/>
+        </c:if>
+
+    </form>
+</div>
+
+
+</body>
+</html>

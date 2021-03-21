@@ -1,0 +1,50 @@
+package com.learneracademy.Entity;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.learneracademyutility.HibernateUtility;
+
+public class MainApplication {
+	static Session session = null;
+	static Transaction tx = null;
+	
+	public static void addAdministration(Administration administration) {
+		session = HibernateUtility.getSession();
+		tx = session.beginTransaction();
+		Administration admin = new Administration(administration.getName(),administration.getEmail(),
+				administration.getPhone(),administration.getPassword(),
+				administration.getCity());
+		session.save(admin);
+		tx.commit();
+		session.disconnect();
+		System.out.println("Admin added successfully");
+	}
+
+	public static boolean adminExist(String name,String email) {
+		session = HibernateUtility.getSession();
+		tx = session.beginTransaction();
+		Query query = session.createQuery("From Administration");
+		List<Administration> adminList = query.list();
+		for(Administration aList : adminList) {
+			if(aList.getName().equals(name) && aList.getEmail().equals(email)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static void addStudent(Student student) {
+	   session = HibernateUtility.getSession();
+	   tx = session.beginTransaction();
+	   Student stu = new Student(student.getSname(), student.getCname(),student.getSubname(),student.getTname());
+	   session.save(stu);
+	   tx.commit();
+	   session.disconnect();
+	   System.out.println("Student added Successfully");
+	}
+}
+

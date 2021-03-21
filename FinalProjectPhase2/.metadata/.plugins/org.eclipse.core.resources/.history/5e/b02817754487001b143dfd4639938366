@@ -1,0 +1,9 @@
+package com.learneracademy.Entity;
+
+public class MainApplication {
+	
+	public static void addAdministration(Administration administration) {
+		
+	}
+
+}

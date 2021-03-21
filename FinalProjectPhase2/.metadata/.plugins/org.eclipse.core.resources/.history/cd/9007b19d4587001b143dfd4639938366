@@ -1,0 +1,22 @@
+package com.learneracademy.Entity;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.learneracademyutility.HibernateUtility;
+
+public class MainApplication {
+	
+	public static void addAdministration(Administration administration) {
+		Session session = HibernateUtility.getSession();
+		Transaction tx = session.beginTransaction();
+		Administration admin = new Administration(administration.getName(),administration.getEmail(),
+				administration.getPhone(),administration.getPassword(),
+				administration.getCity());
+		session.save(admin);
+		tx.commit();
+		session.disconnect();
+		System.out.println("Admin added successfully");
+	}
+
+}
