@@ -72,6 +72,7 @@ public class AddStudent extends HttpServlet {
 		out.print("</form>");
 		if (addedStudentSuccess)
 			out.println("Student added successfully");
+		addedStudentSuccess = false;
 		out.println("</div>");
 	}
 
